@@ -95,13 +95,13 @@ func DeleteDuplicates(data []string,tableName *string, db *sql.DB){
 				tempMap[item] = true
 				tempSlice = append(tempSlice, item)
 		}else{			
-			fmt.Println("DELETING COPY")
+		
 			DELETEstmt :=`DELETE FROM "Phone Numbers" WHERE id = $1`
-			amt,e := db.Exec(DELETEstmt,index)
+			_,e := db.Exec(DELETEstmt,index)
 			if e != nil{
 				fmt.Println(e)
 			}
-			fmt.Println("AMOUNT DELETED",amt)
+		
 		}
 	}
 
