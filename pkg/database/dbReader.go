@@ -93,6 +93,7 @@ func DeleteDuplicates(data []string,tableName *string, db *sql.DB){
 	for index,item := range data{
 		if _, val := tempMap[item]; !val{
 				tempMap[item] = true
+				
 				tempSlice = append(tempSlice, item)
 		}else{			
 		
