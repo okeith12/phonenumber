@@ -56,3 +56,6 @@ When your program is done your database entries should look like this (the order
 1234567893
 1234567894
 
+
+## My Process
+![PhoneNumberNormalizer](https://user-images.githubusercontent.com/35121941/148281578-bf911fcb-ec67-42e0-ba3b-5c619cc54a64.PNG)
