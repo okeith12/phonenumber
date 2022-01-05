@@ -62,7 +62,7 @@ func ReadAllDataFromTable(database *sql.DB, tableName *string, dataExist bool) [
 //insertData takes a file and read it into the Database that was declared in the parameter
 func insertData(dbName *string, db *sql.DB){
 	data,_:= os.ReadFile("phone_numbers")
-		pn := strings.Split(string(data),",")
+		pn := strings.Split(string(data),"\n")
 	
 		for id,d := range pn{
 			dbINSERTstmt := fmt.Sprintf("INSERT into %s(Number,ID) values($1,$2)",*dbName)
