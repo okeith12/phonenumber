@@ -83,6 +83,7 @@ func UpdateData(datta []string,tableName *string, db *sql.DB){
 			fmt.Println(err)
 		}
 	}
+	fmt.Println("Checking For Duplicates...")
 	DeleteDuplicates(datta,tableName,db)
 	
 }
