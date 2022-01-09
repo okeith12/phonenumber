@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"os"
 	"strings"
-
 	"github.com/lib/pq"
 	data "github.com/okeith12/quizGame/phonenumbernorm/pkg/data"
 )
@@ -16,7 +15,7 @@ func OpenDatabase(db_name string) (*sql.DB,error){
 		host     = "localhost"
 		port     = 5432
 		user     = "postgres"
-		password = 3241
+		password = ENTERPASSWORDHERE
 	)
 	 var dbname  =  db_name
 
