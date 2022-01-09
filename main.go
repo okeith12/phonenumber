@@ -8,7 +8,7 @@ import (
 
 func main() {
 	dataBase := "first_db"
-	tableName := "Phone Numbers"
+	tableName := "phonenumbers"
 	hasData := false
 	database,err :=dbReader.OpenDatabase(dataBase)
 	if err !=nil{

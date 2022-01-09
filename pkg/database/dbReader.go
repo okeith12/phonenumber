@@ -16,7 +16,7 @@ func OpenDatabase(db_name string) (*sql.DB,error){
 		host     = "localhost"
 		port     = 5432
 		user     = "postgres"
-		password = ENTERYOURPASSWORDHERE
+		password = 3241
 	)
 	 var dbname  =  db_name
 
@@ -47,7 +47,7 @@ func ReadAllDataFromTable(database *sql.DB, tableName *string, dataExist bool) [
 		insertData(&protectedDBname,database)
 	}
 	var dataAll []string
-	rows, err := database.Query(`SELECT "number" FROM "Phone Numbers" `)
+	rows, err := database.Query(`SELECT "number" FROM "phonenumbers" `)
 	if err != nil{
 		fmt.Println(err)
 	}
@@ -96,8 +96,8 @@ func DeleteDuplicates(data []string,tableName *string, db *sql.DB){
 				
 				tempSlice = append(tempSlice, item)
 		}else{			
-		
-			DELETEstmt :=`DELETE FROM "Phone Numbers" WHERE id = $1`
+			fmt.Println("Deleting Duplicate Number........")
+			DELETEstmt :=fmt.Sprintf("DELETE FROM %s WHERE id = $1",*tableName)
 			_,e := db.Exec(DELETEstmt,index)
 			if e != nil{
 				fmt.Println(e)
