@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"os"
 	"strings"
-
 	"github.com/lib/pq"
 	data "github.com/okeith12/quizGame/phonenumbernorm/pkg/data"
 )
